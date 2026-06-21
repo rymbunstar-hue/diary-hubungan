@@ -52,7 +52,7 @@ export function RecoveryMode() {
     }, 5000);
 
     // Update timer every second
-    const startTime = new Date(incident.created_at).getTime();
+    const startTime = new Date(incident.created_at || new Date()).getTime();
     const timerInterval = setInterval(() => {
       const now = new Date().getTime();
       const diff = now - startTime;
